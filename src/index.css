@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@layer components{
+  .btn-header{
+    @apply px-3 py-2 bg-white rounded-full shadow-sm cursor-pointer
+  }
+}
