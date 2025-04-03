@@ -3,9 +3,9 @@ import foto from '../Images/fire.svg'
 
 function Header() {
     return (  
-        <header className="bg-[#EEEEEE] py-5 pb-10">
+        <header className="bg-[#1A1A40] py-5 pb-10 shadow-2xl ">
             <div className="flex justify-center pb-5">
-                <h1 className="text-[#747788] text-3xl">Animes populares</h1>
+                <h1 className="text-[#FFFFFF] text-3xl">Animes populares</h1>
             </div>
             <div className="flex justify-center mt-4 gap-11 items-center">
                 <button className="btn-header flex gap-2 items-center">Popular <img src={foto} alt="" className="w-5 h-5"/></button>
