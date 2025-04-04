@@ -1,11 +1,17 @@
 import React from "react";
 
-function CardAnimes({title, image}) {
-    return (  
-        <div className="flex flex-col gap-3">
-            <h1>{title}</h1>
-            <img src={image} alt={`Foto de ${title}`} className="w-[225px] h-[318px] object-cover"/>
-            <button className="px-3 py-2 bg-[#4B0082] rounded-[10px] shadow-sm cursor-pointer hover:opacity-50 text-white">Saiba mais</button>
+function CardAnimes({ title, image }) {
+    return (
+        <div className="flex flex-col gap-4 items-center">
+            <h1 className="text-center font-semibold text-base px-2 h-10">{title}</h1>
+            <img
+                src={image}
+                alt={`Foto de ${title}`}
+                className="w-[200px] h-[280px] object-cover rounded-lg"
+            />
+            <button className="w-full px-4 py-2 bg-[#4B0082] text-white rounded-lg hover:opacity-80 transition-opacity">
+                Saiba mais
+            </button>
         </div>
     );
 }
