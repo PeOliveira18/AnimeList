@@ -9,7 +9,7 @@ function CardAnimes({ title, image }) {
                 alt={`Foto de ${title}`}
                 className="w-[200px] h-[280px] object-cover rounded-lg"
             />
-            <button className="w-full px-4 py-2 bg-[#4B0082] text-white rounded-lg hover:opacity-80 transition-opacity">
+            <button className="max-w-[200px] w-full px-4 py-2 bg-[#4B0082] text-white rounded-lg hover:opacity-80 transition-opacity">
                 Saiba mais
             </button>
         </div>

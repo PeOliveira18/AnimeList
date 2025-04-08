@@ -1,7 +1,14 @@
 import React from "react";
 import foto from "../Images/fire.svg";
 
-function Header() {
+function Header({search, setSearch}) {
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value)
+    console.log(e.target.value)
+    
+  }
+
   return (
     <header className="bg-[#1A1A40] py-5 pb-10 shadow-2xl w-full">
       <div className="flex justify-center pb-5 text-center">
@@ -11,12 +18,15 @@ function Header() {
         <button className="btn-header flex gap-2 items-center">
           Popular <img src={foto} alt="" className="w-5 h-5" />
         </button>
-        <form action="" className="relative w-full max-w-xs md:max-w-md">
+        <form className="relative w-full max-w-xs md:max-w-md">
           <div className="flex items-center bg-white rounded-full border border-gray-300">
             <input
               type="text"
               placeholder="Busque um anime"
-              className="px-4 py-2 w-full"
+              className="px-4 py-2 w-full outline-none"
+              value={search}
+              onChange={handleSearch}
+            
             />
             <button className="btn-header bg-gray-300 px-4 py-2">Buscar</button>
           </div>
