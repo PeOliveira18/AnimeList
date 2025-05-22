@@ -8,14 +8,12 @@ function ContainerCardAnimes({popularAnimes = []}) {
                     {
                         popularAnimes.length > 0 &&
                     popularAnimes.map((anime) => (
-                        <div
-                            
-                            className="flex justify-center shadow-2xl border border-[#91A7FF] rounded-2xl w-full max-w-[400px] p-6 bg-white"
+                        <div className="flex justify-center shadow-2xl border border-[#91A7FF] rounded-2xl w-full max-w-[400px] p-6 bg-white" key={anime.mal_id}
                         >
                             <CardAnimes
-                                
                                 title={anime.title}
                                 image={anime.images?.jpg?.image_url}
+                                id={anime.mal_id}
                             />
                         </div>
                     ))

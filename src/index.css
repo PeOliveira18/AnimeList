@@ -1,6 +1,26 @@
 @import "tailwindcss";
+@layer utilities {
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    animation: gradientMove 6s ease infinite;
+  }
+}
+
+
 @layer components{
   .btn-header{
     @apply px-3 py-2 bg-white rounded-full shadow-sm cursor-pointer
   }
+
 }
