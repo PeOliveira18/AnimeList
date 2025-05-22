@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 function CardAnimes({ title, image }) {
     return (
@@ -9,9 +10,11 @@ function CardAnimes({ title, image }) {
                 alt={`Foto de ${title}`}
                 className="w-[200px] h-[280px] object-cover rounded-lg"
             />
-            <button className="max-w-[200px] w-full px-4 py-2 bg-[#4B0082] text-white rounded-lg hover:opacity-80 transition-opacity">
+            <Link to='AnimeDetail'>
+                <button className="max-w-[200px] w-full px-4 py-2 bg-[#4B0082] text-white rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
                 Saiba mais
-            </button>
+                </button>
+            </Link>
         </div>
     );
 }

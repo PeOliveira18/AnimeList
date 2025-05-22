@@ -1,9 +1,5 @@
-export const getSearchAnimes = async ({search, set}) => {
-    try{
-        const res = await fetch(`https://api.jikan.moe/v4/top/anime?q=${search}`)
-        const data = await res.json()
-        set(data.data)
-    }catch (error){
-        console.log(error);
-    }
-}
+export const getSearchAnimes = async (query) => {
+    const res = await fetch(`https://api.jikan.moe/v4/anime?q=${query}`);
+    const data = await res.json();
+    return data.data;
+};
