@@ -23,4 +23,8 @@
     @apply px-3 py-2 bg-white rounded-full shadow-sm cursor-pointer
   }
 
+  .text-gradient{
+    @apply text-4xl font-extrabold bg-gradient-to-r from-indigo-500 to-pink-400 bg-clip-text text-transparent bg-[length:300%_300%]
+  }
+
 }
