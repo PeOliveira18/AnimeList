@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { getPopularAnimes } from "../Services/getPopularAnimes";
 import { getMovieDetails } from "../Services/getMovieDetails";
 import { Link, useParams } from "react-router";
-
+import { useNavigate } from "react-router-dom";
 
 function AnimeDetails() {
     const [anime, setAnime] = useState({})
     const { id } = useParams()
     const [mostrarMais, setMostrarMais] = useState(false)
+    
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchAnimes = async () => {
@@ -53,10 +55,10 @@ function AnimeDetails() {
                         </div>
                         <div className="flex mt-7">
                             <h1>
-                                {mostrarMais ? anime.synopsis : `${anime.synopsis?.substring(0, 255)}...`}
+                                {mostrarMais ? anime.synopsis : `${anime.synopsis?.substring(0, 255)}`}
                                 <span className="ml-2">
                                     <button onClick={() => setMostrarMais(!mostrarMais)} className="text-gradient text-[16px] cursor-pointer">
-                                        {mostrarMais ? 'Show Less' : 'Show More'}
+                                        {mostrarMais ? ' Show Less' : '...Show More'}
                                     </button>
                                 </span>
                             </h1>
@@ -78,9 +80,8 @@ function AnimeDetails() {
                 ) : (
                     <h1>Trailer não divulgado</h1>
                 )}
-                <Link to='/Popular' className="mb-5 w-full flex justify-center">
-                    <button className="bg-fuchsia-700 rounded-[8px] px-3 py-2 font-extrabold cursor-pointer w-full max-w-xs">Voltar</button>
-                </Link>
+                    <button onClick={() => navigate(-1)} className="bg-fuchsia-700 rounded-[8px] px-3 py-2 font-extrabold cursor-pointer w-full max-w-xs mb-5">Voltar</button>
+
             </div>
 
         </div>

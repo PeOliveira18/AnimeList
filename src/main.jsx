@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Estreando from './Pages/estreando.jsx'
+import Airing from './Pages/airing.jsx'
 import Popular from './Pages/popular.jsx'
 import Upcoming from './Pages/upcoming.jsx'
 import AnimeDetails from './Pages/animeDetails.jsx'
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
     element: <Popular/>
   },
   {
-    path: '/Estreando',
-    element: <Estreando/>
+    path: '/Airing',
+    element: <Airing/>
   },
   {
     path: '/Upcoming',
