@@ -39,6 +39,9 @@ function Header({search, setSearch, name}) {
         <Link to='/Upcoming'>
           <button className="btn-header">Upcoming</button>
         </Link>
+        <Link to='/Genres'>
+          <button className="btn-header">Genres</button>
+        </Link>
       </div>
     </header>
   );

@@ -7,6 +7,7 @@ import Airing from './Pages/airing.jsx'
 import Popular from './Pages/popular.jsx'
 import Upcoming from './Pages/upcoming.jsx'
 import AnimeDetails from './Pages/animeDetails.jsx'
+import Genres from './Pages/genres.jsx'
 import App from './App.jsx'
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: '/Upcoming',
     element: <Upcoming/>
+  },
+  {
+    path: '/Genres',
+    element: <Genres/>
   },
   {
     path: '/AnimeDetail/:id',

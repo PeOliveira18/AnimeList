@@ -27,4 +27,12 @@
     @apply text-4xl font-extrabold bg-gradient-to-r from-indigo-500 to-pink-400 bg-clip-text text-transparent bg-[length:300%_300%]
   }
 
+  .titulo-card-animes{
+    @apply border-[0.5px] border-[#272727] bg-[#333333] 
+  }
+
+  .detalhes-animes{
+    @apply text-[11px] text-[#666666] 
+  }
+
 }

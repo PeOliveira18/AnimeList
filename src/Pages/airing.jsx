@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/header";
 import { getAnimesAiring } from "../Services/getAnimeAiring";
-import { getSearchAnimes } from "../Services/getSearchAnimes"; // não esqueça de importar isso!
+import { getSearchAnimes } from "../Services/getSearchAnimes"; 
 import ContainerCardAnimes from "../Components/containerCardAnimes";
 import { useScroll } from "../Components/handleScroll";
 
